@@ -11,3 +11,9 @@ cd "$olddir" || exit
 sudo apt install language-pack-en
 export LC_ALL="en_GB.UTF-8"
 sudo dpkg-reconfigure locales
+
+function windowssucks {
+  sed -i 's/\r//g' ./*
+}
+export -f windowssucks
+alias windows_sucks=windowssucks
